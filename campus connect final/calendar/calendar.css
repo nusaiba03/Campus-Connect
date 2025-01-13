@@ -1,0 +1,128 @@
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+  }
+
+  .calendar {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    border: 2px solid #ccc; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    position: relative;
+    z-index: 1;
+    background-color: #ffffff;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .days-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    font-weight: bold;
+  }
+  
+  .day {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+  }
+  
+  .today {
+    background-color: #e9e7e7;
+  }
+  
+  .currentMonth {
+    color: #000;
+  }
+  
+  .prevNextMonth {
+    color: #ccc;
+  }
+
+  header {
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  header img {
+    max-width: 100px; 
+    left:0;
+    margin: 20px;
+  }
+  
+  header h1 {
+    font-size: 40px;
+    flex-grow: 1; 
+    text-align: center;
+    left: 45%;
+  }
+  nav {
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 200px;
+    height: calc(100vh - 40px);
+    z-index: 1;
+    overflow-y: auto;
+  }
+
+  #left-nav {
+    background-color: #ffffff;
+    top: 150px;
+    left: 0;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #333;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #ddd;
+  }
+  

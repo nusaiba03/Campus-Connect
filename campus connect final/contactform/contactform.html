@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+<head> 
+
+    <meta charset="UTF-8"> 
+
+    <link rel="stylesheet" href="contactform.css"> 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head> 
+
+<body> 
+  <nav class="navbar">
+    <ul>
+      <li><a href="../home/home.html">Home</a></li>
+      <li><a href="../chat/chat.html">Chat</a></li>
+      <li><a href="../societies/societies.html">Societies</a></li>
+      <li><a href="contactform.html">Contact Us</a></li>
+      <li><a href="../help/help.html">Helpful Uni Links</a></li>
+      <li><a href="../profile/profile.html">Profile</a></li>
+      <li><a href="../calendar/calendar.html">Calendar</a></li>
+    </ul>
+  </nav>
+
+    
+
+    <div class="form-container">
+        
+        
+        <h2>Contact Us</h2>
+            
+        <form action="https://api.web3forms.com/submit" method="POST" > 
+
+            
+           <input type="hidden" name="access_key" value="926de8e2-2e1e-4f7d-801c-80bae9f81986">
+            <input type="text"  placeholder="Your Username" class="contact-inputs" required><br>
+            <input type="email"  placeholder="Your Email" class="contact-inputs"required><br> 
+            <input type="text"  placeholder="Subject" class="contact-inputs"required><br> 
+
+            <textarea  name="message" placeholder="How can we help you..." cols="30" rows="10" class="contact-inputs" ></textarea><br> 
+            
+            <input type="submit" class="submit" value="Submit"> 
+        </form>  
+
+    </div> 
+
+
+</body> 
+
+</html> 
