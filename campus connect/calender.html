@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calendar Page</title>
+    <link rel="stylesheet" type="text/css" href="/calendar.css">
+</head>
+<body>
+    <header>
+        <h1>Calendar</h1>
+    </header>
+  
+    <main>
+        <div class="calendar">
+            <div class="controls">
+                <span class="month">March 2024</span>
+                <button class="previous-btn" onclick="previousMonth()">&#8249;</button>
+                <button class="next-btn" onclick="nextMonth()">&#8250;</button>
+            </div>
+            <div class="days">
+                <!-- Days will be generated dynamically -->
+            </div>
+        </div>
+    </main>
+  
+    <footer>
+        <p>&copy; 2024 My Calendar App</p>
+    </footer>
+  
+    <script>
+        const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        let currentMonthIndex = 2; // March (0-based index)
+
+        function updateCalendar() {
+            const monthElement = document.querySelector('.month');
+            monthElement.textContent = months[currentMonthIndex] + ' 2024';
+            const daysElement = document.querySelector('.days');
+            daysElement.innerHTML = '';
+            const numDays = daysInMonth(currentMonthIndex, 2024);
+            for (let i = 1; i <= numDays; i++) {
+                const dayElement = document.createElement('div');
+                dayElement.classList.add('day');
+                dayElement.textContent = i;
+                daysElement.appendChild(dayElement);
+            }
+        }
+
+        function daysInMonth(month, year) {
+            return new Date(year, month + 1, 0).getDate();
+        }
+
+        function previousMonth() {
+            currentMonthIndex = (currentMonthIndex - 1 + months.length) % months.length;
+            updateCalendar();
+        }
+
+        function nextMonth() {
+            currentMonthIndex = (currentMonthIndex + 1) % months.length;
+            updateCalendar();
+        }
+
+        // Initial update
+        updateCalendar();
+    </script>
+</body>
+</html>
